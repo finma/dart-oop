@@ -12,6 +12,12 @@ class Person {
   }
 }
 
+extension GoodbyePerson on Person {
+  void sayGoodbye(String paramName) {
+    print('Goodbye $paramName, from $name');
+  }
+}
+
 void main(List<String> args) {
   var person1 = Person();
   person1.name = 'Finma';
@@ -23,6 +29,8 @@ void main(List<String> args) {
 
   person1.sayHello('Fathur');
   print(person1.getName());
+
+  person1.sayGoodbye('Fathur');
 
   var person2 = Person();
   print(person2);
